@@ -1,6 +1,6 @@
-import { askNombre, askApellidos, askFecha } from "./userPrompts.js";
-import { printSaludo } from "./print.js";
-import { openNewWindow } from "./window.js";
+import { askNombre, askApellidos, askFecha } from "./prompts.js";
+import { printSaludo } from "./data.js";
+import { newWindow } from "./windowBtn.js";
 export function reset() {
   const button = document.getElementById("reset");
 
@@ -11,6 +11,6 @@ export function reset() {
 
     printSaludo(nombre, apellidos, fecha);
 
-    openNewWindow();
+    newWindow();
   });
 }

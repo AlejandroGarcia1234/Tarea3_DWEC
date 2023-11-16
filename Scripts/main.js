@@ -1,7 +1,7 @@
-import { askNombre, askApellidos, askFecha } from "./userPrompts.js";
-import { printSaludo } from "./print.js";
-import { openNewWindow } from "./window.js";
-import { reset } from "./resetButton.js";
+import { askNombre, askApellidos, askFecha } from "./prompts.js";
+import { printSaludo } from "./data.js";
+import { newWindow } from "./windowBtn.js";
+import { reset } from "./resetBtn.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const nombre = askNombre();
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   printSaludo(nombre, apellidos, fecha);
 
-  openNewWindow();
+  newWindow();
 
   reset();
 });

@@ -1,4 +1,4 @@
-import { tiempo, estaciones } from "./time.js";
+import { tiempo, estaciones } from "./date.js";
 export function printSaludo(nombre, apellidos, fecha) {
 
     let nombreCompleto = nombre + " " + apellidos;
