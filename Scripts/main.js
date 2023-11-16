@@ -1,17 +1,16 @@
-import { askNombre, askApellidos, askFecha } from "./prompts.js";
-import { printSaludo } from "./data.js";
-import { newWindow } from "./windowBtn.js";
-import { reset } from "./resetBtn.js";
+import { obtenerNombre, obtenerApellidos, obtenerFechaNacimiento } from "./prompts.js";
+import { mostrarSaludo } from "./data.js";
+import { abrirNuevaVentana } from "./windowBtn.js";
+import { reiniciar } from "./resetBtn.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const nombre = askNombre();
-  const apellidos = askApellidos();
-  const fecha = askFecha();
+  const nombre = obtenerNombre();
+  const apellidos = obtenerApellidos();
+  const fechaNacimiento = obtenerFechaNacimiento();
 
+  mostrarSaludo(nombre, apellidos, fechaNacimiento);
 
-  printSaludo(nombre, apellidos, fecha);
+  abrirNuevaVentana();
 
-  newWindow();
-
-  reset();
+  reiniciar();
 });

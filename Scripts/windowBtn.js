@@ -1,19 +1,17 @@
-export function newWindow() {
-
-    const ventanaBtn = document.createElement('button')
-    ventanaBtn.innerText = "Abrir ventana"
-    document.body.appendChild(ventanaBtn)
-
-    ventanaBtn.addEventListener("click", () => {
-        window.location.href = "./newWindow.html"
-    })
-
-
-    const reiniciarBtn = document.createElement('button')
-    reiniciarBtn.innerText = "Reiniciar"
-    document.body.appendChild(reiniciarBtn)
-
-    reiniciarBtn.addEventListener("click", () => {
-        window.location.href = "./index.html"
-    })
+export function abrirNuevaVentana() {
+    const botonVentana = document.createElement('button');
+    botonVentana.innerText = "Abrir ventana";
+    document.body.appendChild(botonVentana);
+  
+    botonVentana.addEventListener("click", () => {
+      window.location.href = "./newWindow.html";
+    });
+  
+    const botonReiniciar = document.createElement('button');
+    botonReiniciar.innerText = "Reiniciar";
+    document.body.appendChild(botonReiniciar);
+  
+    botonReiniciar.addEventListener("click", () => {
+      window.location.href = "./index.html";
+    });
   }

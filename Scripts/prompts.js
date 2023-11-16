@@ -1,4 +1,4 @@
-export function askNombre() {
+export function obtenerNombre() {
     let nombre;
     let esTexto;
     do {
@@ -6,14 +6,14 @@ export function askNombre() {
       esTexto = /^[A-Za-z]+$/i.test(nombre);
   
       if (!esTexto) {
-        nombre = prompt("Tu nombre debe de estar compuesto de letras:");
+        nombre = prompt("Tu nombre debe estar compuesto de letras:");
         esTexto = /^[A-Za-z]+$/i.test(nombre);
       }
     } while (!esTexto);
     return nombre;
   }
   
-  export function askApellidos() {
+  export function obtenerApellidos() {
     let apellidos;
     let esTexto;
     do {
@@ -21,14 +21,14 @@ export function askNombre() {
       esTexto = /[a-zA-ZÀ-ÖØ-öø-ÿ\s]+/i.test(apellidos);
   
       if (!esTexto) {
-        apellidos = prompt("Tus apellidos deben de estar compuesto de letras:");
+        apellidos = prompt("Tus apellidos deben estar compuestos de letras:");
         esTexto = /[a-zA-ZÀ-ÖØ-öø-ÿ\s]+/i.test(apellidos);
       }
     } while (!esTexto);
     return apellidos;
   }
   
-  export function askFecha() {
+  export function obtenerFechaNacimiento() {
     let fecha;
     let esFecha;
   
@@ -43,3 +43,5 @@ export function askNombre() {
     } while (!esFecha);
     return fecha;
   }
+
+  

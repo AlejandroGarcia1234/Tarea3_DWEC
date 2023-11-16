@@ -1,16 +1,17 @@
-import { askNombre, askApellidos, askFecha } from "./prompts.js";
-import { printSaludo } from "./data.js";
-import { newWindow } from "./windowBtn.js";
-export function reset() {
-  const button = document.getElementById("reset");
+import { obtenerNombre, obtenerApellidos, obtenerFechaNacimiento } from "./prompts.js";
+import { mostrarSaludo } from "./data.js";
+import { abrirNuevaVentana } from "./windowBtn.js";
 
-  button.addEventListener("click", () => {
-    const nombre = askNombre();
-    const apellidos = askApellidos();
-    const fecha = askFecha();
+export function reiniciar() {
+  const botonReiniciar = document.getElementById("reset");
 
-    printSaludo(nombre, apellidos, fecha);
+  botonReiniciar.addEventListener("click", () => {
+    const nombre = obtenerNombre();
+    const apellidos = obtenerApellidos();
+    const fechaNacimiento = obtenerFechaNacimiento();
 
-    newWindow();
+    mostrarSaludo(nombre, apellidos, fechaNacimiento);
+
+    abrirNuevaVentana();
   });
 }
