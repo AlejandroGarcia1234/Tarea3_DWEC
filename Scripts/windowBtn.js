@@ -1,4 +1,5 @@
 export function abrirNuevaVentana() {
+    // Crear botón para abrir nueva ventana
     const botonVentana = document.createElement('button');
     botonVentana.innerText = "Abrir ventana";
     document.body.appendChild(botonVentana);
@@ -6,7 +7,7 @@ export function abrirNuevaVentana() {
     botonVentana.addEventListener("click", () => {
       window.location.href = "./newWindow.html";
     });
-  
+    // Crear botón para reiniciar
     const botonReiniciar = document.createElement('button');
     botonReiniciar.innerText = "Reiniciar";
     document.body.appendChild(botonReiniciar);

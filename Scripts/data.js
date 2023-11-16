@@ -1,9 +1,12 @@
 import { calcularEdad, obtenerEstaciones } from "./date.js";
 
 export function mostrarSaludo(nombre, apellidos, fecha) {
+    // Obtenemos el nombre completo con su correspondiente espacio
     let nombreCompleto = nombre + " " + apellidos;
     const [season, year] = obtenerEstaciones(fecha);
+    // Abrimos el documento
     document.open();
+    // Escribimos nuestro contenido en el documento
     document.write(
       `
       <h1>Práctica 3 - DWEC</h1>
@@ -19,8 +22,9 @@ export function mostrarSaludo(nombre, apellidos, fecha) {
       El <strong>coseno de 180</strong> es <strong>${Math.floor(Math.cos(180))}</strong><br>
       El número mayor de <strong>(34, 67, 23, 75, 35, 19)</strong> es <strong>${Math.max(34, 67, 23, 75, 35, 19)}</strong><br>
       Ejemplo de número aleatorio entre 0 y 100: <strong>${Math.floor(Math.random() * 101)}</strong><br>
+
       `
       );
-
+    //Cerramos el documento
     document.close();
   }
